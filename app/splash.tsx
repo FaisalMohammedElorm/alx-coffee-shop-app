@@ -1,5 +1,6 @@
+import { router } from 'expo-router'
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const Splash = () => {
   return (
@@ -15,7 +16,10 @@ const Splash = () => {
             <Text style={styles.subText}>Welcome to our cozy coffee corner, where </Text>
               <Text style={styles.subText}>every cup is a delightful for you.</Text>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => router.push('/(home)/home')}
+      >
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
       </ImageBackground>
